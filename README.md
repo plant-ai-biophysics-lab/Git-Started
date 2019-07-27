@@ -2,7 +2,7 @@
 
 <h4><b> A walkthrough of the Plant AI and Biophysics Lab's git workflow. </b></h4>
 
-## Git terminology
+## Terminology
 
 Here are some of my loose definitions of basic git concepts...
 
