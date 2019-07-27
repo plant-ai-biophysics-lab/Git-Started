@@ -45,7 +45,7 @@ As an example, let's say that I want to develop a new software feature. I'll do 
 7. Once PR approved, merge into `dev` branch on local.
 8. Add, commit and push updated version of `dev` to remote. 
 9. Delete local and remote copies of `dev_<insert-name>` branch.
-10. Start again.
+10. Return to Step (3) and start again.
 
 ### Cloning a repo
 
