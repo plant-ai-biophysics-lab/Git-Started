@@ -32,9 +32,7 @@ Here are some of my loose definitions of basic git concepts...
 
 ## Our basic workflow
 
-<<<<<<< HEAD
 We use a `master` <-> `dev` <-> `<feature_branch>` development workflow. Two branches, `master` and `dev`, require a pull request (PR) prior to merging new code. Contributors to a repo can create any additional number of `<feature_branch>` branches. These third-order branches are where new software features are born. We try to keep a 1:1 feature to branch mapping. That means each branch should be associated with *a single* feature. Prior to merging into the `dev` branch, and once you've tested your `<feature_branch>` code sufficiently, you can ask one or more collaborators to review it by making a PR. Following several merges of different `<feature_branch>` branches into `dev` it's probably worthwhile to merge `dev` into `master`. This event should be accompanied by releasing a new version, e.g. `v0.1`.
->>>>>>> dev
 
 As an example, let's say that I want to develop a new software feature, called `our_basic_workflow`. I'll do the following:
 
@@ -90,26 +88,58 @@ $ git commit -m 'Insert useful message here...'
 $ git push origin our_basic_workflow
 ```
 
-7. Submit a PR to a collaborator. 
-8. Wait for PR approval or suggestions for edits.
-9. Once PR approved, merge `our_basic_workflow` into `dev` branch on local.
-10. Add, commit and push updated version of `dev` to remote. 
-11. Delete local and remote copies of `our_basic_workflow` branch.
-12. Start again at step (3) with a new `<feature_branch>`.
+7. Submit a PR to a collaborator.
 
-### Cloning a repo
+The easiest way to do this is through the online UI.
 
-The first thing you'll want to be able to do is <b>clone</b> a Github repository. 
+![new pull request](images/new_pull_request.png)
+
+After click the button above, define what merge you are proposing, whom you want to review it, and the create the pull request.
+
+![open pull request](images/open_pull_request.png)
+
+8. Wait for PR approval or suggestions for edits from the proposed reviewers.
+
+9. Once PR is approved, merge `our_basic_workflow` into `dev` branch on local.
+
+To do this, following good practice, examine the active branch and the other branches that are tracked locally.
 
 ```bash
-$ git clone https://github.com/<organization>/<repository-name>.git
+$ git branch
 ```
 
-You can grab the repo URL from the remote repo. For example,
+Assuming you are in the `our_basic_workflow` branch, check out the `dev` branch.
 
-![test image](images/clone_with_https_screenshot.png)
+```bash
+$ git checkout dev
+```
 
-### Checking out a new branch
+Now, merge the `our_basic_workflow` branch into the `dev` branch.
+
+```bash
+$ git merge dev
+```
+
+This command merges from the specified branch, `our_basic_workflow` in this case, into the currently active branch `dev`.
+
+10. Add, commit and push updated version of `dev` to remote. 
+
+```bash
+$ git add <insert-files-to-stage> # repeat this for each file
+$ git commit -m 'Insert useful message here...'
+$ git push origin dev
+```
+
+11. Delete local and remote copies of `our_basic_workflow` branch.
+
+```bash
+$ git checkout dev
+$ git branch -D our_basic_workflow
+$ git push origin --delete our_basic_workflow
+```
+
+12. Start again at step (3) with a new `<feature_branch>`.
+
 
 ## Advanced workflow
 
