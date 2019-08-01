@@ -32,20 +32,73 @@ Here are some of my loose definitions of basic git concepts...
 
 ## Our basic workflow
 
-We use a `master` <-> `dev` <-> `dev_<insert-name>` development workflow. Two branches, `master` and `dev`, require a pull request (PR) prior to merging new code. Contributors to a repo can create any additional number of `dev_<insert-name>` branches. These third-order branches are where new software features are born. We try to keep a 1:1 feature to branch mapping. That means each branch should be associated with *a single* feature. Prior to merging into the `dev` branch, and once you've tested your `dev_<insert-name>` code sufficiently, you can ask one or more collaborators to review it by making a PR. Following several merges of different `dev_<insert-name>` branches into `dev` it's probably worthwhile to merge `dev` into `master`. This event should be accompanied by releasing a new version, e.g. `v0.1`.
+We use a `master` <-> `dev` <-> `<feature_branch>` development workflow. Two branches, `master` and `dev`, require a pull request (PR) prior to merging new code. Contributors to a repo can create any additional number of `<feature_branch>` branches. These third-order branches are where new software features are born. We try to keep a 1:1 feature to branch mapping. That means each branch should be associated with *a single* feature. Prior to merging into the `dev` branch, and once you've tested your `<feature_branch>` code sufficiently, you can ask one or more collaborators to review it by making a PR. Following several merges of different `<feature_branch>` branches into `dev` it's probably worthwhile to merge `dev` into `master`. This event should be accompanied by releasing a new version, e.g. `v0.1`.
 
-As an example, let's say that I want to develop a new software feature. I'll do the following:
+As an example, let's say that I want to develop a new software feature, called `our_basic_workflow`. I'll do the following:
 
 1. Clone the repo, which starts as the `master` branch.
-2. Checkout the existing `dev` branch from the remote.
-3. Checkout a new `dev_<insert-name>` branch on your local machine.
-4. CODE TEST CODE TEST CODE TEST CODE TEST .... CODE TEST ... =)
-5. Submit a PR to a collaborator. 
-6. Wait for PR approval or suggestions for edits.
-7. Once PR approved, merge into `dev` branch on local.
-8. Add, commit and push updated version of `dev` to remote. 
-9. Delete local and remote copies of `dev_<insert-name>` branch.
-10. Start again.
+
+```bash
+$ git clone https://github.com/plant-ai-biophysics-lab/git-started.git
+```
+
+You can grab the repo URL from the remote repo. For example,
+
+![test image](images/clone_with_https_screenshot.png)
+
+Examine the active branch and the other branches that are tracked locally.
+
+```bash
+$ git branch
+```
+
+2. Change into the `git-started` repo directory and checkout the existing `dev` branch from the remote.
+
+```bash
+$ cd git-started
+$ git checkout dev
+```
+
+3. Checkout a new branch, called `our_basic_workflow` for instance, on your local machine.
+
+```bash
+$ git checkout -b our_basic_workflow
+
+```
+
+Again, examine the active branch and the other branches that are tracked locally.
+
+```bash
+$ git branch
+```
+
+4. CODE TEST CODE TEST CODE TEST. Once you've finished up a small chunk of code changes, it's probably a good idea to commit to the remote repo.
+
+5. First, take a look at which files changed from the index file.
+
+```bash
+$ git status
+```
+
+6. Then, add updated files to staging area, commit with descriptive message, and push to remote repo (steps 5 and 6 below).
+
+```bash
+$ git add <insert-files-to-stage> # repeat this for each file
+$ git commit -m 'Insert useful message here...'
+$ git push origin our_basic_workflow
+```
+
+7. Submit a PR to a collaborator. 
+
+
+
+
+8. Wait for PR approval or suggestions for edits.
+9. Once PR approved, merge `our_basic_workflow` into `dev` branch on local.
+10. Add, commit and push updated version of `dev` to remote. 
+11. Delete local and remote copies of `our_basic_workflow` branch.
+12. Start again at step (3) with a new `<feature_branch>`.
+
 
 ### Cloning a repo
 
