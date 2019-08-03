@@ -151,9 +151,9 @@ $ git push origin --delete our_basic_workflow
 
 ### Squash and rebase
 
-Coming soon!
+[Matt J.] Create a new <feature-branch>, replace this text with "Coming soon!", and then create a PR  (to Alex and I) for merging the `dev` branch back into `dev`.
 
 ### Merge conflicts
 
-Coming soon!
+[Alex O.] Create a new <feature-branch>, replace this text with "Coming soon!", and then create a PR (to Matt and I) for merging your <feature-branch> branch back into `dev` branch.
 
