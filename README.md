@@ -2,6 +2,12 @@
 
 <h4><b> A walkthrough of the Plant AI and Biophysics Lab's git workflow. </b></h4>
 
+## Motivation
+
+Our lab aims to create high quality computational tools for solving basic and applied problems related to plants. To maximize efficiency and scalability, we apply a lightweight software engineering/analytics workflow built on Git version control. The documentation below introduces basic concepts, Git workflow procedures and code examples, and discusses more advanced topics like squash-rebase and merge conflicts.
+
+Don't hesitate to help us improve this workflow by making suggestions or submitting a pull request.
+
 ## Terminology
 
 Here are some of my loose definitions of basic git concepts...
@@ -32,7 +38,7 @@ Here are some of my loose definitions of basic git concepts...
 
 ## Our basic workflow
 
-We use a `master` <-> `dev` <-> `<feature_branch>` development workflow. Two branches, `master` and `dev`, require a pull request (PR) prior to merging new code. Contributors to a repo can create any additional number of `<feature_branch>` branches. These third-order branches are where new software features are born. We try to keep a 1:1 feature to branch mapping. That means each branch should be associated with *a single* feature. Prior to merging into the `dev` branch, and once you've tested your `<feature_branch>` code sufficiently, you can ask one or more collaborators to review it by making a PR. Following several merges of different `<feature_branch>` branches into `dev` it's probably worthwhile to merge `dev` into `master`. This event should be accompanied by releasing a new version, e.g. `v0.1`.
+We use a `master` <-> `dev` <-> `<feature_branch>` development workflow. Two branches, `master` and `dev`, require a pull request (PR) to one or more collaborators prior to merging new code (step 7 below). Contributors to a repo can create any additional number of `<feature_branch>` branches. These third-order branches are where new software features are born. We try to keep a 1:1 feature to branch mapping. That means each branch should be associated with *a single* feature. Prior to merging into the `dev` branch, and once you've tested your `<feature_branch>` code sufficiently, you can ask one or more collaborators to review it by making a PR. Following several merges of different `<feature_branch>` branches into `dev` it's probably worthwhile to merge `dev` into `master`. This event should be accompanied by releasing a new version, e.g. `v0.1`.
 
 As an example, let's say that I want to develop a new software feature, called `our_basic_workflow`. I'll do the following:
 
@@ -141,6 +147,13 @@ $ git push origin --delete our_basic_workflow
 12. Start again at step (3) with a new `<feature_branch>`.
 
 
-## Advanced workflow
+## Advanced workflow and functions
+
+### Squash and rebase
 
 Coming soon!
+
+### Merge conflicts
+
+Coming soon!
+
