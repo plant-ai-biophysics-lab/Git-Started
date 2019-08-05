@@ -128,7 +128,7 @@ $ git merge dev
 
 This command merges from the specified branch, `our_basic_workflow` in this case, into the currently active branch `dev`.
 
-10. Add, commit and push updated version of `dev` to remote. 
+10. Add, commit and push updated version of `dev` to remote.
 
 ```bash
 $ git add <insert-files-to-stage> # repeat this for each file
@@ -151,9 +151,8 @@ $ git push origin --delete our_basic_workflow
 
 ### Squash and rebase
 
-[Matt J.] Create a new `<feature-branch>`, replace this text with "Coming soon!", and then create a PR  (to Alex and I) for merging the `<feature-branch>` branch back into `dev`.
+Coming soon!
 
 ### Merge conflicts
 
 [Alex O.] Create a new `<feature-branch>`, replace this text with "Coming soon!", and then create a PR (to Matt and I) for merging your `<feature-branch>` branch back into `dev` branch.
-
