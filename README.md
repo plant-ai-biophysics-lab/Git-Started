@@ -155,5 +155,4 @@ Coming soon!
 
 ### Merge conflicts
 
-Coming soon!
-
+[Sean M.] Create a new `<feature-branch>`, replace this text with "Coming soon!", and then create a PR (to Alex and I) for merging your `<feature-branch>` branch back into `dev` branch.
