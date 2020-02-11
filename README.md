@@ -123,7 +123,7 @@ $ git checkout dev
 Now, merge the `our_basic_workflow` branch into the `dev` branch.
 
 ```bash
-$ git merge dev
+$ git merge our_basic_workflow
 ```
 
 This command merges from the specified branch, `our_basic_workflow` in this case, into the currently active branch `dev`.
