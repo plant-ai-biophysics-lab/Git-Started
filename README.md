@@ -149,6 +149,31 @@ $ git push origin --delete our_basic_workflow
 
 ## Advanced workflow and functions
 
+### Basic Configuration
+
+```
+git config --global user.name "<Your_Name>"
+```
+```
+git config --global user.email "<Your_Email>"
+```
+Do not omit the double quote.
+
+### Useful Aliases
+
+##### History
+Decorated `log` command.
+
+**Setup**
+```
+git config --global alias.hist "log --oneline --graph --decorate --all"
+```
+
+**Usage**
+```
+git hist
+```
+
 ### Squash and rebase
 
 Coming soon!
