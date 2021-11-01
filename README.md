@@ -164,12 +164,12 @@ Do not omit the double quote.
 #### History
 Decorated `log` command.
 
-**Setup**
+- Setup
 ```
 git config --global alias.hist "log --oneline --graph --decorate --all"
 ```
 
-**Usage**
+- Usage
 ```
 git hist
 ```
