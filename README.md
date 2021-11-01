@@ -161,7 +161,7 @@ Do not omit the double quote.
 
 ### Useful Aliases
 
-##### History
+#### History
 Decorated `log` command.
 
 **Setup**
