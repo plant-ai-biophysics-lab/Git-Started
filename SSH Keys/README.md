@@ -1,13 +1,38 @@
 # Adding SSH Keys to your Github Account
 
-## Accessing the Public Key
+## SSH Setup (Optional)
+```
+cd ~/.ssh
+ls -al
+```
+If ssh already exists, `id_rsa` and `id_rsa.pub` will be displayed if not you have to generate your keys.
+
+```
+cd ~
+mkdir .ssh
+cd .ssh
+```
+Generate ssh keys
+
+```
+ssh-keygen -t rsa
+```
+
+You'll be prompted to enter a passphrase and then re-enter it. You can leave the passphrase blank for quick access but it is highly recommended to use one. After this you can check your keys using
+
+```
+ls -al
+```
+
+
+## Accessing Public Key
 ```
 cd ~/.ssh
 cat id_rsa.pub
 ```
 Copy the contents of your public key.
 
-## Setting up the key in Github Account
+## Adding Key
 Click on your account in the upper-right corner. Go to `Account > Setting > SSH and GPG Keys > New SSH Key` <br>
 
 <img src="./.assets/new_SSH_keys.jpg" alt="sample" width="600"/>
