@@ -1,7 +1,6 @@
 # Adding SSH Keys to your Github Account
 
 ## Accessing the Public Key
-You have to copy the contents of your public key.
 ```
 cd ~/.ssh
 cat id_rsa.pub
@@ -9,6 +8,18 @@ cat id_rsa.pub
 Copy the contents of your public key.
 
 ## Setting up the key in Github Account
-Click on to your account at top-right corner `Account > Setting > SSH and GPG Keys > New SSH Key` <br>
-Set a title to identify the computer to which the public key belongs to and then paste the contents of `id_rsa.pub` in key. After that enter your github password to add the key.
+Click on your account in the upper-right corner. Go to `Account > Setting > SSH and GPG Keys > New SSH Key` <br>
 
+<img src="./.assets/new_SSH_keys.jpg" alt="sample" width="600"/>
+
+Set a title to identify the computer that has the public key, and then paste the contents of 'id rsa.pub' into key. Then, to add the key, enter your github password.
+
+## Checking Github Access
+```
+cd ~/.ssh
+ssh -T git@github.com
+```
+
+If everything is set-up correctly you'll be prompted with "Are you sure to continue connecting", type `yes`. After that enter your passphrase, to which a message referring to your github username will popup.
+
+<img src="./.assets/check.jpg" alt="check" width="700"/>
