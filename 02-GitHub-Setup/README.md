@@ -53,4 +53,4 @@ ssh -T git@github.com
 
 If everything is set-up correctly you'll be prompted with "Are you sure to continue connecting", type `yes`. After that enter your passphrase, to which a message referring to your github username will popup.
 
-<img src="./.assets/git_check.jpg" alt="check" width="700"/>
+<img src="./.assets/git_check.jpeg" alt="check" width="700"/>
